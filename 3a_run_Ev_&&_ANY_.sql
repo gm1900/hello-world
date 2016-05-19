@@ -20,11 +20,7 @@
 --  ++++++++++++++++++++++++++++++++++  --  ++++++++++++++++++++++++++++++++++  --  ++++++++++++++++++++++++++++++++++
 
 --  ++++++++++++++++++++++++++++++++++ 
-update `nmi`.`transaction` set pk_ts_trx ='' where transaction_id >0; 
-update limelight.orders set pk_ts_trx ='' where id >0; 
-select count(*) from `nmi`.`transaction` where pk_ts_trx <>'';
-select count(*) from limelight.orders where pk_ts_trx <>'';
-
+ 
 --  ++++++++++++++++++++++++++++++++++ 
 --  call _sp_imports_run_bulk_all_by_one_shot('limelight','orders','_cb911_trx_imports_hdr','gm',48) ;
 --  call _sp_imports_run_bulk_all_by_one_shot_cancel('limelight','orders','_cb911_trx_imports_hdr','gm') ;
